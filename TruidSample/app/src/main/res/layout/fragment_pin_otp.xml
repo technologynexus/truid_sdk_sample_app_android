@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nexusgroup.truidsample.PinAndOTP">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtProfile"
+        android:text="Profile selected"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPin"
+        android:hint="Enter pin"
+        android:inputType="number"
+        android:maxLength="6"
+        android:layout_below="@id/txtProfile"
+    />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtProfile"
+        android:id="@+id/txtChall"
+        android:hint="Enter challenge"
+        android:inputType="number"
+        android:visibility="invisible"
+        android:maxLength="8"
+        android:layout_alignParentRight="true"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPin"
+        android:id="@+id/btnGetOtp"
+        android:text="Generate OTP"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Your OTP is..."
+        android:textSize="20dp"
+        android:id="@+id/txtOTP"
+        android:layout_below="@id/txtPin"
+
+        android:layout_alignParentRight="true"
+    />
+
+
+</RelativeLayout>
